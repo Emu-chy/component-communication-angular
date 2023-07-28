@@ -4,13 +4,8 @@
   </div>
   <div class="blog-post">
     <div *ngFor="let blog of blogs">
-      <div class="column">
-        <div>
-          <img [src]="blog.ImageUrl" alt="Blog post image" />
-          <h2>{{ blog.Title }}</h2>
-          <p>{{ blog.Description }}</p>
-        </div>
-      </div>
+      <!-- component communication -->
+      <app-blog [blog]="blog"></app-blog>
     </div>
   </div>
 </div>
@@ -21,18 +16,8 @@
   </div>
   <div class="blog-post">
     <div *ngFor="let blog of featureBlogs">
-      <div class="column">
-        <div>
-          <img [src]="blog.ImageUrl" alt="Featured Blog Image" />
-          <h2>{{ blog.Title }}</h2>
-          <p>{{ blog.Description }}</p>
-        </div>
-        <div class="icon-column">
-          <i class="fa fa-thumbs-up"></i>
-          <i class="fa fa-comment"></i>
-          <i class="fa fa-star"></i>
-        </div>
-      </div>
+      <!-- component communication -->
+      <app-blog [blog]="blog"></app-blog>
     </div>
   </div>
 </div>
